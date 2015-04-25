@@ -175,5 +175,5 @@ upstream	https://github.com/angular-ui/bootstrap (push)
 ### Finally - Pull Request!
 
 Go to your forked repository on `Github.com` and you should see the new button suggesting your to "Compare & Pull Request". That's it! If you did `pull --rebase` as recommended, it should let you submit it in no time!
-Well done!
 
+Well done!
