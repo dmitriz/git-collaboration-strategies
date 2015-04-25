@@ -6,7 +6,7 @@ Simplest and most effective Git strategies that I know
 
 Let us say you like some project so much that you want to contribute to it. Or maybe you find it so broken that you want to fix it. More often then not, you can view and download files but cannot change anything. Speaking the language of [Git](http://git-scm.com/) - *you don't have push privileges* to the project.
 
-If you are in this situation, you may find this strategy useful. I really like the project [AngularJS UI Bootstrap](https://github.com/angular-ui/bootstrap) and **will use it as example here**.
+If you are in this situation, you may find this strategy useful. I really like the project [AngularJS UI Bootstrap](https://github.com/angular-ui/bootstrap) and **will use it as example here**. If you are not used to Git of feel intimidated by it, you are at the right spot - I'll try to make it as easy and clear as I can.
 
 
 ### Fork the project
@@ -20,7 +20,8 @@ Most likely you want to have the exact copy of the project as it is to get start
 
 - Just delete your forked repository and fork it again! 
 
-So yes, the usual warnings and disclaimers apply, you can lose any work in that deleted repository, but really the same rules about backups (that you've doing already, have you?) and such apply pretty much to any work you do anywhere...
+So yes, the usual warnings and disclaimers apply, you can lose any work in that deleted repository, but really the same rules about backups (that you've doing already, have you?) apply to any work you do and store anywhere...
+
 
 
 ### Clone your forked repository to your machine(s)
@@ -36,3 +37,9 @@ Now that we have our forked copy, we `clone` it to our local machine, speaking t
 ```
 For the first to work, you'd need to install Github's desktop application on your machine, and for the second, you need to [install Git](http://git-scm.com/downloads), which you'll likely need anyway...
 
+
+### Branch out and begin working
+
+Now the most interesting part begins! But here is my next rule:
+
+- I want my `master branch` 
