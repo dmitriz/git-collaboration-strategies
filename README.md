@@ -43,16 +43,59 @@ Who knows, as you were busy forking and cloning, someone could have already sent
 
 - *Rule 1. I want my `master branch` to be clean at all times and reflect the latest changes as much as possible.*
 
+That means, I never change anything there and try to update it regularly or whenever I need.
+
 *What is a branch?. It is common to give a long explanation [what a branch is](http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell). But in a real tiny nutshell - a branch is just a version of your code. It is like switching between directories containing different versions, except that Git does the switching for you in the same directory, and uses much less space for it.*
 
-As you `cloned` your forked repository and entered its directory, you are in `master branch`, which is the main version of your code. It is often recommended to keep your `master branch` **deployable at any time**. In our situation we rely on the original project to be deployable, and simply try to syncronise it with the `upstream` at all times.
+As you `cloned` your forked repository and entered its directory, you are (should be) in your local `master branch`. Here `master` is the common name for the main branch, which is like the main version of the code. Check that you are on `master` by
+```
+    $ git status
+    # On branch master
+    nothing to commit, working directory clean
+```
+It is often recommended to keep your `master branch` **deployable at any time**. In our situation we rely on the original project to be deployable, and simply try to syncronise it with the `upstream` at all times.
 
-*What is upstream?. Another buzzword - [see this StackOverflow thread for a long discussion](http://stackoverflow.com/questions/2739376/definition-of-downstream-and-upstream). In our example, `upstream` is the name (string) that is commonly used to point to our original repository. [A so-called Remote](http://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) if speaking Git language.*
+*What is upstream?. Another buzzword - [see this StackOverflow thread for a long discussion](http://stackoverflow.com/questions/2739376/definition-of-downstream-and-upstream). Similar to a waterfall, where water is falling on you, with you having no control on it when standing below, Git's `upstream` is the original code that we can't influence directly.  In our example, `upstream` is the name (string) that is commonly used to point to our original repository. [A so-called Remote](http://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) if speaking Git language.*
 
-What it means for
+Let us set our `upstream`, so Git will know where to get the updates:
+```
+    $ git remote add upstream https://github.com/angular-ui/bootstrap
+```
+and check it with:
+```
+    $ git remote -v
+    origin	https://github.com/dmitriz/bootstrap.git (fetch)
+    origin	https://github.com/dmitriz/bootstrap.git (push)
+    upstream	https://github.com/angular-ui/bootstrap (fetch)
+    upstream	https://github.com/angular-ui/bootstrap (push)
+```
+And now that we have set it, here is **my preferred and only command to update to most recent changes**:
+```
+    $ git pull --rebase upstream master
+    From https://github.com/angular-ui/bootstrap
+     * branch            master     -> FETCH_HEAD
+    Current branch master is up to date.
+```
+This one commands is doing a lot - it checks for all new changes in the `ustream` since you updated last time, downloads them and updates your `master branch` (or whatever branch you are currently in). If you observe my *Rule 1* and never make any changes to your `master branch` (other than updates), this should always work smoothly. 
+
+If, however, you've made some new local changes since your last update, the same command will try to do more for you - it will attempt to make all `upstream` changes **ahead of your new local changes**. And this is exactly how you want it - see below...
+
+*Note. The option `--rebase` is important. Without it, Git would try to download the recent changes and `merge` them into your local `branch`. It won't matter for your `master` (if you observe Rule 1), but would matter for other `branches` where you do make changes. And we want to keep our life sane by remembering just one command instead of 10. ;-)
 
 
 ### Branch out and begin working
 
 Now the most interesting part begins!
-Now following my rule, I don't want 
+Finally we can work and do cool things!
+But remember Rule 1 - don't mess with `master branch`.
+So we first want to copy the `master` into a new `branch`:
+```
+    $ git checkout -b new-branch
+    git checkout -b new
+    Switched to a new branch 'new'
+```
+That's it! Now we can start working and mess around.
+
+
+
+
