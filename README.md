@@ -1,2 +1,2 @@
 # git-collaboration-strategies
-The simplest and most efficient Git strategies that I know
+Simplest and most effective Git strategies that I know
