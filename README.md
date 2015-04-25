@@ -162,7 +162,7 @@ To https://github.com/dmitriz/bootstrap.git
  * [new branch]      my-feature -> my-feature
 ```
 That looks really good!
-Remember that `origin` is **not** the orignal project (that is `upstream`!) but our forked repository:
+Remember that `origin` **does not** point to the orignal project (that is `upstream`!) but to our forked repository:
 ```
 $ git remote -v
 origin	https://github.com/dmitriz/bootstrap.git (fetch)
@@ -170,3 +170,10 @@ origin	https://github.com/dmitriz/bootstrap.git (push)
 upstream	https://github.com/angular-ui/bootstrap (fetch)
 upstream	https://github.com/angular-ui/bootstrap (push)
 ```
+*Note. If you try to `push` from one `branch` to several different ones, Git won't let you. Which is too much trouble for me - that is why I always name both `branches` the same, so there won't be any two different remote for one local. Also `pushing` to existing `branches` can be a problem, so for small contributions I rather create brand new local `branch` and push it to the same named remote `branch` of the `origin`.
+
+### Finally - Pull Request!
+
+Go to your forked repository on `Github.com` and you should see the new button suggesting your to "Compare & Pull Request". That's it! If you did `pull --rebase` as recommended, it should let you submit it in no time!
+Well done!
+
