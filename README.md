@@ -18,10 +18,9 @@ Your first step is to **fork** the project. Easy enough if you haven't forked it
 
 Most likely you want to have the exact copy of the project as it is to get started with. Assuming you do, the simplest solution I found is the following *brutal one*, which **you have to use at your own risk**:
 
-- Just delete your forked repository and fork it again! 
+- Just delete your previously existing forked repository and fork it again from the origin! That way you get the latest version and don't need any udpate.
 
 So yes, the usual warnings and disclaimers apply, you can lose any work in that deleted repository, but really the same rules about backups (that you've doing already, have you?) apply to any work you do and store anywhere...
-
 
 
 ### Clone your forked repository to your machine(s)
@@ -40,6 +39,8 @@ For the first to work, you'd need to install Github's desktop application on you
 
 ### Branch out and begin working
 
-Now the most interesting part begins! But here is my next rule:
+Now the most interesting part begins! But here is my first rule:
 
-- I want my `master branch` 
+- I want my `master branch` to always be clean and reflect the latest changes as much as possible.
+
+
