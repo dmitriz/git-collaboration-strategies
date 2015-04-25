@@ -37,10 +37,22 @@ Now that we have our forked copy, we `clone` it to our local machine, speaking t
 For the first to work, you'd need to install Github's desktop application on your machine, and for the second, you need to [install Git](http://git-scm.com/downloads), which you'll likely need anyway...
 
 
+### Make sure we have the most recent version on our machine
+
+Who knows, as you were busy forking and cloning, someone could have already sent a new update to the original project. So here is my first rule:
+
+- *Rule 1. I want my `master branch` to be clean at all times and reflect the latest changes as much as possible.*
+
+*What is a branch?. It is common to give a long explanation [what a branch is](http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell). But in a real tiny nutshell - a branch is just a version of your code. It is like switching between directories containing different versions, except that Git does the switching for you in the same directory, and uses much less space for it.*
+
+As you `cloned` your forked repository and entered its directory, you are in `master branch`, which is the main version of your code. It is often recommended to keep your `master branch` **deployable at any time**. In our situation we rely on the original project to be deployable, and simply try to syncronise it with the `upstream` at all times.
+
+*What is upstream?. Another buzzword - [see this StackOverflow thread for a long discussion](http://stackoverflow.com/questions/2739376/definition-of-downstream-and-upstream). In our example, `upstream` is the name (string) that is commonly used to point to our original repository. [A so-called Remote](http://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) if speaking Git language.*
+
+What it means for
+
+
 ### Branch out and begin working
 
-Now the most interesting part begins! But here is my first rule:
-
-- I want my `master branch` to always be clean and reflect the latest changes as much as possible.
-
-*What is a branch?. It is common to give long explanations [what a branch is](http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell). But in a real tiny nutshell - a branch is just a version of your code.* It is like switching between directories containing different versions, except that Git does the switching for you :)
+Now the most interesting part begins!
+Now following my rule, I don't want 
