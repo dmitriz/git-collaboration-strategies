@@ -43,4 +43,4 @@ Now the most interesting part begins! But here is my first rule:
 
 - I want my `master branch` to always be clean and reflect the latest changes as much as possible.
 
-
+*What is a branch?. It is common to give long explanations [what a branch is](http://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell). But in a real tiny nutshell - a branch is just a version of your code.* It is like switching between directories containing different versions, except that Git does the switching for you :)
