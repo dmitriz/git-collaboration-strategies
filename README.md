@@ -1,3 +1,5 @@
+*I'm not doing this to "teach", I'm doing this to LEARN. Your feedback and corrections are absolutely welcome!*
+
 # Git Collaboration Strategies
 Simplest and most effective Git strategies that I know
 
